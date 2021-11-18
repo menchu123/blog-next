@@ -22,7 +22,7 @@ const Login = () => {
     }
   }, [userData]);
 
-  const onLogin = async (event) => {
+  const onLogin = (event) => {
     event.preventDefault();
     localStorage.setItem("user", JSON.stringify(userData));
   };
