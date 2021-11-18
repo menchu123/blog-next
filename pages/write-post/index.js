@@ -16,6 +16,10 @@ const WritePost = () => {
   };
 
   const createPost = async (newPost) => {
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    newPost.userId = loggedUser.id;
+    newPost.userName = loggedUser.name;
+    newPost.userAvatar = loggedUser.imageURL;
     await fetch("https://isdi-blog-posts-api.herokuapp.com/posts", {
       method: "POST",
       body: JSON.stringify(newPost),
