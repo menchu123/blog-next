@@ -5,3 +5,8 @@
 .postLinks {
   cursor: pointer;
 }
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+}
